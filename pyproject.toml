@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "haskell-payment-clearing-invariant-ledger"
+version = "0.1.0"
+description = "Payment clearing invariant ledger for settlement windows, breaks, liquidity holds, and operator-safe proof."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "AGPL-3.0-only"
+authors = [{ name = "Kinetic Gain" }]
+keywords = ["haskell", "payments", "clearing", "settlement", "fintech", "risk"]
+
+[project.scripts]
+haskell-payment-clearing-invariant-ledger = "haskell_payment_clearing_invariant_ledger.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["haskell_payment_clearing_invariant_ledger*"]

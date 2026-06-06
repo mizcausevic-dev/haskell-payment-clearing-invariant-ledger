@@ -1,0 +1,43 @@
+{
+  "as_of": "2026-06-06T16:15:00Z",
+  "estate": "Payment clearing, settlement exception, liquidity hold, and invariant-proof lanes",
+  "lanes": [
+    {
+      "lane_id": "same-day-ach-window",
+      "rail": "Same-day ACH settlement",
+      "daily_volume": 18420000,
+      "unmatched_debits": 37,
+      "late_batches": 5,
+      "liquidity_hold_percent": 12.5,
+      "manual_override_count": 11,
+      "reconciliation_delay_minutes": 74,
+      "owner": "Treasury operations",
+      "next_action": "Freeze batch cutover until debit-credit parity and liquidity-hold exceptions are reconciled."
+    },
+    {
+      "lane_id": "card-clearing-adjustments",
+      "rail": "Card clearing adjustments",
+      "daily_volume": 29100000,
+      "unmatched_debits": 18,
+      "late_batches": 3,
+      "liquidity_hold_percent": 6.8,
+      "manual_override_count": 7,
+      "reconciliation_delay_minutes": 41,
+      "owner": "Payments risk",
+      "next_action": "Attach adjustment reason codes to the clearing proof before the next merchant settlement run."
+    },
+    {
+      "lane_id": "wire-outbound-review",
+      "rail": "Outbound wire review",
+      "daily_volume": 9600000,
+      "unmatched_debits": 4,
+      "late_batches": 1,
+      "liquidity_hold_percent": 2.1,
+      "manual_override_count": 2,
+      "reconciliation_delay_minutes": 16,
+      "owner": "Risk control",
+      "next_action": "Keep wire exception checks in the daily liquidity-control review."
+    }
+  ]
+}
+
